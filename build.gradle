@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'war'
+archivesBaseName = 'resteasyservice'
+version = '1' 
+repositories {
+    mavenCentral()
+}
+dependencies {
+	compile 'org.jboss.resteasy:resteasy-jaxrs:4.1.1.Final'
+	compile 'org.jboss.resteasy:resteasy-spring:4.1.1.Final'
+	compile 'org.springframework.boot:spring-boot-starter-web:1.2.2.RELEASE'
+	compile 'org.jboss.resteasy:resteasy-jackson2-provider:4.1.1.Final'
+	compile  'org.hibernate:hibernate-core:4.3.6.Final'
+   compile 'javax.servlet:javax.servlet-api:3.1.0'
+   compile 'org.slf4j:slf4j-simple:1.7.7'
+   compile 'org.javassist:javassist:3.15.0-GA'
+   compile 'mysql:mysql-connector-java:5.1.46'
+   compile 'org.springframework:spring-tx:4.1.0.RELEASE'
+   compile 'commons-dbcp:commons-dbcp:1.2.2'
+   compile 'org.springframework:spring-orm:4.1.6.RELEASE'
+   
+   testCompile group: 'junit', name: 'junit', version: '3.8.1'
+   
+  testImplementation('org.junit.jupiter:junit-jupiter-api:5.4.2')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.4.2')
+     
+} 
